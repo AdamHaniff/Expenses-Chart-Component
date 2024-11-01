@@ -1,0 +1,39 @@
+// ********* DESIGN SYSTEM *********
+
+// ************ COLORS ************
+$color-antique-white: #f8e9dd;
+$color-sunrise-orange: #ec755d;
+$color-white: #fff;
+$color-brown-tumbleweed: #382314;
+$color-neptune: #76b5bc;
+$color-stonewall: #92857a;
+$color-soapstone: #fffbf6;
+
+// ********** FONT-FAMILY **********
+
+// ********* FONT-WEIGHTS *********
+// 400, 700,
+
+// ************* BASE *************
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  // background:
+  // font-family:
+}
+
+html,
+body {
+  height: 100%;
+}

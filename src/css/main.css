@@ -11,7 +11,23 @@ html {
   box-sizing: border-box;
 }
 
+body {
+  background: #f8e9dd;
+  font-family: "DM Sans", serif;
+}
+
 html,
 body {
   height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
 }/*# sourceMappingURL=main.css.map */

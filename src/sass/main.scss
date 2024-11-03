@@ -30,11 +30,22 @@ html {
 }
 
 body {
-  // background:
-  // font-family:
+  background: $color-antique-white;
+  font-family: $font-dm-sans;
 }
 
 html,
 body {
   height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
 }

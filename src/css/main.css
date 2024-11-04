@@ -14,6 +14,9 @@ html {
 body {
   background: #f8e9dd;
   font-family: "DM Sans", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 html,
@@ -21,13 +24,21 @@ body {
   height: 100%;
 }
 
-body {
+.app {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 1.6rem;
 }
 
-.app {
+.balance {
+  background: #ec755d;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 34.3rem;
+}
+.balance__info {
   display: flex;
   flex-direction: column;
 }/*# sourceMappingURL=main.css.map */

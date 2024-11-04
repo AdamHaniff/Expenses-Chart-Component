@@ -32,6 +32,9 @@ html {
 body {
   background: $color-antique-white;
   font-family: $font-dm-sans;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 html,
@@ -39,13 +42,28 @@ body {
   height: 100%;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+// ********* MOBILE LAYOUTS *********
 
+// ********** 375px LAYOUT **********
+
+// ************** APP **************
 .app {
   display: flex;
   flex-direction: column;
+  gap: 1.6rem;
+}
+
+// ************* BALANCE *************
+.balance {
+  background: $color-sunrise-orange;
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 34.3rem;
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+  }
 }

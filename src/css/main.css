@@ -34,11 +34,26 @@ body {
   background: #ec755d;
   border-radius: 1rem;
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  width: 34.3rem;
+  gap: 15.1rem;
+  padding: 2rem 2.4rem 2.2rem 2rem;
 }
 .balance__info {
   display: flex;
   flex-direction: column;
+  gap: 0.8rem;
+}
+.balance__label {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.balance__number {
+  color: #fff;
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+.balance__logo {
+  display: block;
+  width: 6rem;
+  height: 4rem;
 }/*# sourceMappingURL=main.css.map */

@@ -98,4 +98,37 @@ body {
     font-weight: $fw-bold;
     margin-bottom: 5.2rem;
   }
+
+  &__chart {
+    display: flex;
+    gap: 1.2rem;
+  }
+
+  &__expense-bar-day {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  &__expense {
+    width: 7.5rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    background: $color-brown-tumbleweed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $color-soapstone;
+    font-size: 1.8rem;
+    font-weight: $fw-bold;
+    display: none;
+  }
+
+  &__bar {
+    width: 3.3rem;
+    border-radius: 0.3rem;
+    background: $color-sunrise-orange;
+  }
 }
+
+// bar height = expense x 2.866

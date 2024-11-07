@@ -68,4 +68,31 @@ body {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 5.2rem;
+}
+.spending__chart {
+  display: flex;
+  gap: 1.2rem;
+}
+.spending__expense-bar-day {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+.spending__expense {
+  width: 7.5rem;
+  height: 4rem;
+  border-radius: 0.5rem;
+  background: #382314;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fffbf6;
+  font-size: 1.8rem;
+  font-weight: 700;
+  display: none;
+}
+.spending__bar {
+  width: 3.3rem;
+  border-radius: 0.3rem;
+  background: #ec755d;
 }/*# sourceMappingURL=main.css.map */

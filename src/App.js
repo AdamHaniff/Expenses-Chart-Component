@@ -68,7 +68,10 @@ function ExpenseBarDay({ expense }) {
   return (
     <div className="spending__expense-bar-day">
       <span className="spending__expense">{expense.amount}</span>
-      <div className="spending__bar"></div>
+      <div
+        className="spending__bar"
+        style={{ height: `${expense.amount * 2.866}px` }}
+      ></div>
       <span className="spending__day">{expense.day}</span>
     </div>
   );

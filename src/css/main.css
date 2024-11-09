@@ -102,4 +102,37 @@ body {
 .spending__day {
   color: #92857a;
   font-size: 1.2rem;
+}
+
+.total {
+  border-top: 0.2rem solid #f8e9dd;
+  border-radius: 0.1rem;
+  padding-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+}
+.total__this-month {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.total__label {
+  color: #92857a;
+  font-size: 1.5rem;
+}
+.total__spent {
+  color: #382314;
+  font-size: 3rem;
+  font-weight: 700;
+}
+.total__last-month {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.total__percentage {
+  color: #382314;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: right;
 }/*# sourceMappingURL=main.css.map */

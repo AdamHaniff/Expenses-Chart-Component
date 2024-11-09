@@ -138,3 +138,42 @@ body {
     font-size: 1.2rem;
   }
 }
+
+// ************* TOTAL *************
+.total {
+  border-top: 0.2rem solid $color-antique-white;
+  border-radius: 0.1rem;
+  padding-top: 2.4rem;
+  display: flex;
+  justify-content: space-between;
+
+  &__this-month {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+  }
+
+  &__label {
+    color: $color-stonewall;
+    font-size: 1.5rem;
+  }
+
+  &__spent {
+    color: $color-brown-tumbleweed;
+    font-size: 3rem;
+    font-weight: $fw-bold;
+  }
+
+  &__last-month {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &__percentage {
+    color: $color-brown-tumbleweed;
+    font-size: 1.5rem;
+    font-weight: $fw-bold;
+    text-align: right;
+  }
+}

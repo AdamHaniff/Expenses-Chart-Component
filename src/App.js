@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 const expenses = [
   {
     day: "mon",
@@ -65,6 +67,14 @@ function Spending() {
 }
 
 function ExpenseBarDay({ expense }) {
+  // EFFECTS
+  useEffect(function () {
+    // Get today's date
+    const today = new Date();
+
+    // Fornat the date to get the abbreviated day name
+  }, []);
+
   return (
     <div className="spending__expense-bar-day">
       <span className="spending__expense">{expense.amount}</span>

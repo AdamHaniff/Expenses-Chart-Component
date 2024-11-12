@@ -53,12 +53,29 @@ function Balance() {
 }
 
 function Spending() {
+  // EFFECTS
+  useEffect(function () {
+    // Get today's date
+    const today = new Date();
+
+    // Format the date to get the abbreviated day name
+    const dayOfWeek = new Intl.DateTimeFormat("en-US", {
+      weekday: "short",
+    })
+      .format(today)
+      .toLowerCase();
+  }, []);
+
   return (
     <div className="spending">
       <h2 className="spending__label">Spending - Last 7 days</h2>
       <div className="spending__chart">
         {expenses.map((expense) => (
-          <ExpenseBarDay key={expense.day} expense={expense} />
+          <ExpenseBarDay
+            key={expense.day}
+            expense={expense}
+            dayOfWeek={dayOfWeek}
+          />
         ))}
       </div>
       <Total />
@@ -66,14 +83,9 @@ function Spending() {
   );
 }
 
-function ExpenseBarDay({ expense }) {
-  // EFFECTS
-  useEffect(function () {
-    // Get today's date
-    const today = new Date();
-
-    // Fornat the date to get the abbreviated day name
-  }, []);
+function ExpenseBarDay({ expense, dayOfWeek }) {
+  // VARIABLES
+  const isToday = dayOfWeek === expense.day;
 
   return (
     <div className="spending__expense-bar-day">

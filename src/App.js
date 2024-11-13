@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 const expenses = [
   {
@@ -53,17 +53,22 @@ function Balance() {
 }
 
 function Spending() {
+  // STATE
+  const [dayOfWeek, setDayOfWeek] = useState("");
+
   // EFFECTS
   useEffect(function () {
     // Get today's date
     const today = new Date();
 
-    // Format the date to get the abbreviated day name
-    const dayOfWeek = new Intl.DateTimeFormat("en-US", {
+    // Format the date to get the abbreviated day name and update 'dayOfWeek'
+    const formattedDay = new Intl.DateTimeFormat("en-US", {
       weekday: "short",
     })
       .format(today)
       .toLowerCase();
+
+    setDayOfWeek(formattedDay);
   }, []);
 
   return (

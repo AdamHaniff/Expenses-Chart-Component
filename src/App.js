@@ -89,14 +89,20 @@ function Spending() {
 }
 
 function ExpenseBarDay({ expense, dayOfWeek }) {
+  // STATE
+  const [isBarHovered, setIsBarHovered] = useState(false);
+
   // VARIABLES
   const isToday = dayOfWeek === expense.day;
+
+  // HANDLER FUNCTIONS
+  function handleBarHovered() {}
 
   return (
     <div className="spending__expense-bar-day">
       <span className="spending__expense">{expense.amount}</span>
       <div
-        className="spending__bar"
+        className={`spending__bar ${isToday ? "color-neptune-bg" : ""}`}
         style={{ height: `${expense.amount * 2.866}px` }}
       ></div>
       <span className="spending__day">{expense.day}</span>

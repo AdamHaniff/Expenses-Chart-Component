@@ -92,7 +92,6 @@ body {
   color: #fffbf6;
   font-size: 1.8rem;
   font-weight: 700;
-  display: none;
 }
 .spending__bar {
   width: 3.3rem;
@@ -135,4 +134,8 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   text-align: right;
+}
+
+.color-neptune-bg {
+  background: #76b5bc;
 }/*# sourceMappingURL=main.css.map */

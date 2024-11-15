@@ -61,7 +61,7 @@ function Spending() {
     // Get today's date
     const today = new Date();
 
-    // Format the date to get the abbreviated day name and update 'dayOfWeek'
+    // Format the date to get the abbreviated weekday and update 'dayOfWeek'
     const formattedDay = new Intl.DateTimeFormat("en-US", {
       weekday: "short",
     })
@@ -96,14 +96,19 @@ function ExpenseBarDay({ expense, dayOfWeek }) {
   const isToday = dayOfWeek === expense.day;
 
   // HANDLER FUNCTIONS
-  function handleBarHovered() {}
+  const handleMouseEnter = () => setIsBarHovered(true);
+  const handleMouseLeave = () => setIsBarHovered(false);
 
   return (
     <div className="spending__expense-bar-day">
-      <span className="spending__expense">{expense.amount}</span>
+      {isBarHovered && (
+        <span className="spending__expense">{expense.amount}</span>
+      )}
       <div
         className={`spending__bar ${isToday ? "color-neptune-bg" : ""}`}
         style={{ height: `${expense.amount * 2.866}px` }}
+        onMouseEnter={handleMouseEnter}
+        onMouseLeave={handleMouseLeave}
       ></div>
       <span className="spending__day">{expense.day}</span>
     </div>

@@ -97,6 +97,13 @@ body {
   width: 3.3rem;
   border-radius: 0.3rem;
   background: #ec755d;
+  cursor: pointer;
+}
+.spending__bar:hover {
+  background: #ff9b86;
+}
+.spending__bar.color-neptune-bg:hover {
+  background: #b4e0e5;
 }
 .spending__day {
   color: #92857a;

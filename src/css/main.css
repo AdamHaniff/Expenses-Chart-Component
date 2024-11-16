@@ -35,7 +35,7 @@ body {
   border-radius: 1rem;
   display: flex;
   align-items: center;
-  gap: 15.1rem;
+  gap: clamp(12.8rem, 12.8rem + 23 * (100vw - 32rem) / 55, 15.1rem);
   padding: 2rem 2.4rem 2.2rem 2rem;
 }
 .balance__info {
@@ -62,6 +62,7 @@ body {
   border-radius: 1rem;
   background: #fffbf6;
   padding: 2.4rem 2rem;
+  display: none;
 }
 .spending__label {
   color: #382314;
@@ -79,7 +80,7 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: flex-end;
-  gap: 0.8rem;
+  gap: 1.1rem;
 }
 .spending__expense {
   width: 7.5rem;

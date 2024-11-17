@@ -18,9 +18,9 @@ $font-dm-sans: "DM Sans", serif;
 $fw-bold: 700;
 
 // ************ VARIABLES ************
-$responsive-128px-151px: clamp(
-  12.8rem,
-  calc(12.8rem + (23 * ((100vw - 32rem) / 55))),
+$responsive-118px-151px: clamp(
+  11.8rem,
+  calc(11.8rem + (33 * ((100vw - 32rem) / 55))),
   15.1rem
 );
 
@@ -68,7 +68,7 @@ body {
   border-radius: 1rem;
   display: flex;
   align-items: center;
-  gap: $responsive-128px-151px;
+  gap: $responsive-118px-151px;
   padding: 2rem 2.4rem 2.2rem 2rem;
 
   &__info {
@@ -100,7 +100,6 @@ body {
   border-radius: 1rem;
   background: $color-soapstone;
   padding: 2.4rem 2rem;
-  display: none;
 
   &__label {
     color: $color-brown-tumbleweed;

@@ -18,6 +18,12 @@ $font-dm-sans: "DM Sans", serif;
 $fw-bold: 700;
 
 // ************ VARIABLES ************
+$responsive-28px-33px: clamp(
+  2.8rem,
+  calc(2.8rem + (5 * ((100vw - 32rem) / 55))),
+  3.3rem
+);
+
 $responsive-118px-151px: clamp(
   11.8rem,
   calc(11.8rem + (33 * ((100vw - 32rem) / 55))),
@@ -136,7 +142,7 @@ body {
   }
 
   &__bar {
-    width: 3.3rem;
+    width: $responsive-28px-33px;
     border-radius: 0.3rem;
     background: $color-sunrise-orange;
     cursor: pointer;

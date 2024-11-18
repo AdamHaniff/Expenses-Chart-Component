@@ -94,7 +94,7 @@ body {
   font-weight: 700;
 }
 .spending__bar {
-  width: 3.3rem;
+  width: clamp(2.8rem, 2.8rem + 5 * (100vw - 32rem) / 55, 3.3rem);
   border-radius: 0.3rem;
   background: #ec755d;
   cursor: pointer;

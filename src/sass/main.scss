@@ -30,6 +30,12 @@ $responsive-118px-151px: clamp(
   15.1rem
 );
 
+$responsive-343px-540px: clamp(
+  34.3rem,
+  calc(34.3rem + (197 * ((100vw - 37.5rem) / 1065))),
+  54rem
+);
+
 // ************* BASE *************
 *,
 *::before,
@@ -198,6 +204,13 @@ body {
     font-size: 1.5rem;
     font-weight: $fw-bold;
     text-align: right;
+  }
+}
+
+// ******** 600px MEDIA QUERY ********
+@media only screen and (min-width: 37.5em) {
+  // ************ BALANCE ************
+  .balance {
   }
 }
 

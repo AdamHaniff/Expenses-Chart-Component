@@ -30,12 +30,6 @@ $responsive-118px-151px: clamp(
   15.1rem
 );
 
-$responsive-343px-540px: clamp(
-  34.3rem,
-  calc(34.3rem + (197 * ((100vw - 37.5rem) / 1065))),
-  54rem
-);
-
 // ************* BASE *************
 *,
 *::before,
@@ -209,8 +203,44 @@ body {
 
 // ******** 600px MEDIA QUERY ********
 @media only screen and (min-width: 37.5em) {
+  // ************** APP **************
+  .app {
+    gap: 2.4rem;
+  }
+
   // ************ BALANCE ************
   .balance {
+    border-radius: 2rem;
+    gap: 28.4rem;
+    padding: 2.7rem 3.9rem 2.5rem 3.2rem;
+
+    &__info {
+      gap: 0.8rem;
+    }
+
+    &__label {
+      font-size: 1.8rem;
+    }
+
+    &__number {
+      font-size: 3.2rem;
+    }
+
+    &__logo {
+      width: 7.2rem;
+      height: 4.8rem;
+    }
+  }
+
+  // ************ SPENDING ************
+  .spending {
+    border-radius: 2rem;
+    padding: 3.2rem 4rem 4rem;
+
+    &__label {
+      font-size: 3.2rem;
+      margin-bottom: 6.6rem;
+    }
   }
 }
 

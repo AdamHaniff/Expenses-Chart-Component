@@ -173,6 +173,38 @@ body {
     font-size: 3.2rem;
     margin-bottom: 6.6rem;
   }
+  .spending__chart {
+    gap: 1.791rem;
+    margin-bottom: 3.2rem;
+  }
+  .spending__expense-bar-day {
+    gap: 0.8rem;
+  }
+  .spending__bar {
+    width: 5.0365rem;
+    border-radius: 0.5rem;
+  }
+  .spending__day {
+    font-size: 1.5rem;
+  }
+  .total {
+    padding-top: 3.2rem;
+  }
+  .total__this-month {
+    gap: 0.1rem;
+  }
+  .total__label {
+    font-size: 1.8rem;
+  }
+  .total__spent {
+    font-size: 4.8rem;
+  }
+  .total__last-month {
+    gap: 0.1rem;
+  }
+  .total__percentage {
+    font-size: 1.8rem;
+  }
 }
 .color-neptune-bg {
   background: #76b5bc;

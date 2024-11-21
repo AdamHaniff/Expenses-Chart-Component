@@ -241,6 +241,49 @@ body {
       font-size: 3.2rem;
       margin-bottom: 6.6rem;
     }
+
+    &__chart {
+      gap: 1.791rem;
+      margin-bottom: 3.2rem;
+    }
+
+    &__expense-bar-day {
+      gap: 0.8rem;
+    }
+
+    &__bar {
+      width: 5.0365rem;
+      border-radius: 0.5rem;
+    }
+
+    &__day {
+      font-size: 1.5rem;
+    }
+  }
+
+  // ************** TOTAL **************
+  .total {
+    padding-top: 3.2rem;
+
+    &__this-month {
+      gap: 0.1rem;
+    }
+
+    &__label {
+      font-size: 1.8rem;
+    }
+
+    &__spent {
+      font-size: 4.8rem;
+    }
+
+    &__last-month {
+      gap: 0.1rem;
+    }
+
+    &__percentage {
+      font-size: 1.8rem;
+    }
   }
 }
 

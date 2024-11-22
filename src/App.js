@@ -101,15 +101,17 @@ function ExpenseBarDay({ expense, dayOfWeek }) {
 
   return (
     <div className="spending__expense-bar-day">
-      {isBarHovered && (
-        <span className="spending__expense">{expense.amount}</span>
-      )}
-      <div
-        className={`spending__bar ${isToday ? "color-neptune-bg" : ""}`}
-        style={{ height: `${expense.amount * 2.866}px` }}
-        onMouseEnter={handleMouseEnter}
-        onMouseLeave={handleMouseLeave}
-      ></div>
+      <div className="spending__expense-bar">
+        {isBarHovered && (
+          <span className="spending__expense">${expense.amount}</span>
+        )}
+        <div
+          className={`spending__bar ${isToday ? "color-neptune-bg" : ""}`}
+          style={{ height: `${expense.amount * 2.866}px` }}
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
+        ></div>
+      </div>
       <span className="spending__day">{expense.day}</span>
     </div>
   );

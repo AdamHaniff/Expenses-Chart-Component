@@ -106,12 +106,6 @@ body {
   background: #ec755d;
   cursor: pointer;
 }
-.spending__bar:hover {
-  background: #ff9b86;
-}
-.spending__bar.color-neptune-bg:hover {
-  background: #b4e0e5;
-}
 .spending__day {
   color: #92857a;
   font-size: 1.2rem;
@@ -211,6 +205,14 @@ body {
   }
   .total__percentage {
     font-size: 1.8rem;
+  }
+}
+@media only screen and (min-width: 62em) {
+  .spending__bar:hover {
+    background: #ff9b86;
+  }
+  .spending__bar.color-neptune-bg:hover {
+    background: #b4e0e5;
   }
 }
 .color-neptune-bg {

@@ -95,14 +95,6 @@
     border-radius: 0.3rem;
     background: $color-sunrise-orange;
     cursor: pointer;
-
-    &:hover {
-      background: $color-peachy-pink;
-    }
-
-    &.color-neptune-bg:hover {
-      background: $color-powder-blue;
-    }
   }
 
   &__day {

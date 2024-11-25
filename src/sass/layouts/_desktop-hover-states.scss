@@ -1,0 +1,17 @@
+// ******* DESKTOP HOVER STATES *******
+
+// ********* 992px MEDIA QUERY *********
+@media only screen and (min-width: 62em) {
+  // ************ SPENDING ************
+  .spending {
+    &__bar {
+      &:hover {
+        background: $color-peachy-pink;
+      }
+
+      &.color-neptune-bg:hover {
+        background: $color-powder-blue;
+      }
+    }
+  }
+}

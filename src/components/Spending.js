@@ -2,41 +2,10 @@ import ExpenseBarDay from "./ExpenseBarDay";
 import Total from "./Total";
 import { useState, useEffect } from "react";
 
-// VARIABLES
-const expenses = [
-  {
-    day: "mon",
-    amount: 17.45,
-  },
-  {
-    day: "tue",
-    amount: 34.91,
-  },
-  {
-    day: "wed",
-    amount: 52.36,
-  },
-  {
-    day: "thu",
-    amount: 31.07,
-  },
-  {
-    day: "fri",
-    amount: 23.39,
-  },
-  {
-    day: "sat",
-    amount: 43.28,
-  },
-  {
-    day: "sun",
-    amount: 25.48,
-  },
-];
-
 export default function Spending() {
   // STATE
   const [dayOfWeek, setDayOfWeek] = useState("");
+  const [expenses, setExpenses] = useState(null);
 
   // EFFECTS
   useEffect(function () {
@@ -51,6 +20,13 @@ export default function Spending() {
       .toLowerCase();
 
     setDayOfWeek(formattedDay);
+  }, []);
+
+  useEffect(function () {
+    fetch("http://localhost:8000/data")
+      .then((res) => res.json())
+      .then((data) => setExpenses(data))
+      .catch((err) => console.log(err));
   }, []);
 
   return (

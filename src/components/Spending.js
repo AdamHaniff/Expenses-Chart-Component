@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 export default function Spending() {
   // STATE
   const [dayOfWeek, setDayOfWeek] = useState("");
-  const [expenses, setExpenses] = useState(null);
+  const [expenses, setExpenses] = useState([]);
 
   // EFFECTS
   useEffect(function () {
@@ -22,11 +22,18 @@ export default function Spending() {
     setDayOfWeek(formattedDay);
   }, []);
 
-  useEffect(function () {
-    fetch("http://localhost:8000/data")
-      .then((res) => res.json())
-      .then((data) => setExpenses(data))
-      .catch((err) => console.log(err));
+  useEffect(() => {
+    const fetchExpenses = async () => {
+      try {
+        const response = await fetch("http://localhost:8000/data");
+        const data = await response.json();
+        setExpenses(data);
+      } catch (err) {
+        console.error(err);
+      }
+    };
+
+    fetchExpenses();
   }, []);
 
   return (

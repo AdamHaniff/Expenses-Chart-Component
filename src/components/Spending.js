@@ -24,8 +24,9 @@ export default function Spending() {
 
   useEffect(() => {
     const fetchExpenses = async () => {
+      // Fetch expenses data
       try {
-        const response = await fetch("http://localhost:8000/data");
+        const response = await fetch("http://localhost:8000/expenses");
         const data = await response.json();
         setExpenses(data);
       } catch (err) {

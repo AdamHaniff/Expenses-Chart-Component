@@ -6,6 +6,7 @@ export default function Spending() {
   // STATE
   const [dayOfWeek, setDayOfWeek] = useState("");
   const [expenses, setExpenses] = useState([]);
+  const [isError, setIsError] = useState(false);
 
   // EFFECTS
   useEffect(function () {
@@ -24,13 +25,14 @@ export default function Spending() {
 
   useEffect(() => {
     const fetchExpenses = async () => {
-      // Fetch expenses data
+      // Fetch expenses data from JSON server
       try {
         const response = await fetch("http://localhost:8000/expenses");
         const data = await response.json();
         setExpenses(data);
       } catch (err) {
-        console.error(err);
+        // Create error element and display error
+        setIsError(true);
       }
     };
 

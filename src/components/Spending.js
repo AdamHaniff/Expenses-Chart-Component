@@ -1,5 +1,6 @@
 import ExpenseBarDay from "./ExpenseBarDay";
 import Total from "./Total";
+import Error from "./Error";
 import { useState, useEffect } from "react";
 
 export default function Spending() {
@@ -40,6 +41,7 @@ export default function Spending() {
         const data = await response.json();
         setExpenses(data);
       } catch (err) {
+        console.log(err);
         setIsError(true);
         setErrorMessage(err.message);
       } finally {
@@ -53,15 +55,19 @@ export default function Spending() {
   return (
     <div className="spending">
       <h2 className="spending__label">Spending - Last 7 days</h2>
-      <div className="spending__chart">
-        {expenses.map((expense) => (
-          <ExpenseBarDay
-            key={expense.day}
-            expense={expense}
-            dayOfWeek={dayOfWeek}
-          />
-        ))}
-      </div>
+      {isError ? (
+        <Error errorMessage={errorMessage} />
+      ) : (
+        <div className="spending__chart">
+          {expenses.map((expense) => (
+            <ExpenseBarDay
+              key={expense.day}
+              expense={expense}
+              dayOfWeek={dayOfWeek}
+            />
+          ))}
+        </div>
+      )}
       <Total />
     </div>
   );

@@ -101,6 +101,12 @@
     color: $color-stonewall;
     font-size: 1.2rem;
   }
+
+  &__error {
+    color: $color-brown-tumbleweed;
+    font-size: 3.2rem;
+    font-weight: $fw-bold;
+  }
 }
 
 // ************* TOTAL *************

@@ -1,6 +1,6 @@
 import ExpenseBarDay from "./ExpenseBarDay";
 import Total from "./Total";
-import Error from "./Error";
+import ErrorMsg from "./ErrorMsg";
 import { useState, useEffect } from "react";
 
 export default function Spending() {
@@ -35,13 +35,12 @@ export default function Spending() {
 
         // Handle non-OK responses
         if (!response.ok) {
-          throw new Error("⚠Couldn't fetch the data⚠");
+          throw new Error("🚨 Couldn't fetch the data 🚨");
         }
 
         const data = await response.json();
         setExpenses(data);
       } catch (err) {
-        console.log(err);
         setIsError(true);
         setErrorMessage(err.message);
       } finally {
@@ -56,7 +55,7 @@ export default function Spending() {
     <div className="spending">
       <h2 className="spending__label">Spending - Last 7 days</h2>
       {isError ? (
-        <Error errorMessage={errorMessage} />
+        <ErrorMsg errorMessage={errorMessage} />
       ) : (
         <div className="spending__chart">
           {expenses.map((expense) => (

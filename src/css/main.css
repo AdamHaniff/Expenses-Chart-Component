@@ -111,9 +111,10 @@ body {
   font-size: 1.2rem;
 }
 .spending__error {
-  color: #382314;
+  color: #ec755d;
   font-size: 3.2rem;
   font-weight: 700;
+  margin: 0 auto;
 }
 
 .total {

@@ -18,6 +18,12 @@ $font-dm-sans: "DM Sans", serif;
 $fw-bold: 700;
 
 // ************ VARIABLES ************
+$responsive-19px-22px: clamp(
+  1.9rem,
+  calc(1.9rem + (3 * ((100vw - 32rem) / 55))),
+  2.2rem
+);
+
 $responsive-28px-33px: clamp(
   2.8rem,
   calc(2.8rem + (5 * ((100vw - 32rem) / 55))),

@@ -103,10 +103,11 @@
   }
 
   &__error {
+    display: inline-block;
     color: $color-sunrise-orange;
-    font-size: 3.2rem;
+    font-size: $responsive-19px-22px;
     font-weight: $fw-bold;
-    margin: 0 auto;
+    margin-bottom: 5.2rem;
   }
 }
 

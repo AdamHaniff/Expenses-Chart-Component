@@ -154,6 +154,7 @@ body {
 @media only screen and (min-width: 37.5em) {
   .app {
     gap: 2.4rem;
+    max-width: 54rem;
   }
   .balance {
     border-radius: 2rem;
@@ -194,6 +195,9 @@ body {
   }
   .spending__day {
     font-size: 1.5rem;
+  }
+  .spending__error {
+    font-size: 3.4rem;
   }
   .total {
     padding-top: 3.2rem;

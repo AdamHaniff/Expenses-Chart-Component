@@ -1,6 +1,7 @@
 import ExpenseBarDay from "./ExpenseBarDay";
 import Total from "./Total";
 import ErrorMsg from "./ErrorMsg";
+import Spinner from "./Spinner";
 import { useState, useEffect } from "react";
 
 export default function Spending() {
@@ -31,7 +32,7 @@ export default function Spending() {
       // Fetch expenses data from JSON server
       try {
         setIsLoading(true);
-        const response = await fetch("http://localhost:8000/expensesd");
+        const response = await fetch("http://localhost:8000/expenses");
 
         // Handle non-OK responses
         if (!response.ok) {
@@ -44,7 +45,7 @@ export default function Spending() {
         setIsError(true);
         setErrorMessage(err.message);
       } finally {
-        setIsLoading(false);
+        // setIsLoading(false);
       }
     };
 
@@ -54,9 +55,14 @@ export default function Spending() {
   return (
     <div className="spending">
       <h2 className="spending__label">Spending - Last 7 days</h2>
-      {isError ? (
+      {isLoading ? (
+        // Display the Spinner while loading
+        <Spinner />
+      ) : isError ? (
+        // Display the error message if there is an error
         <ErrorMsg errorMessage={errorMessage} />
       ) : (
+        // Display the expenses chart if data is successfully loaded
         <div className="spending__chart">
           {expenses.map((expense) => (
             <ExpenseBarDay

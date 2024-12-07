@@ -150,11 +150,16 @@
   }
 }
 
+// *************** SPINNER ***************
+.spinner {
+}
+
 // ******** 600px MEDIA QUERY ********
 @media only screen and (min-width: 37.5em) {
   // ************** APP **************
   .app {
     gap: 2.4rem;
+    max-width: 54rem;
   }
 
   // ************ BALANCE ************
@@ -207,6 +212,10 @@
 
     &__day {
       font-size: 1.5rem;
+    }
+
+    &__error {
+      font-size: 3.4rem;
     }
   }
 

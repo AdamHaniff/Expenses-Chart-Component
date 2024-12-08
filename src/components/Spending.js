@@ -45,7 +45,7 @@ export default function Spending() {
         setIsError(true);
         setErrorMessage(err.message);
       } finally {
-        // setIsLoading(false);
+        setIsLoading(false);
       }
     };
 

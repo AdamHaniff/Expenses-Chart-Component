@@ -1,3 +1,11 @@
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
 *,
 *::before,
 *::after {
@@ -151,6 +159,16 @@ body {
   text-align: right;
 }
 
+.spinner {
+  width: 4rem;
+  height: 4rem;
+  border: 0.5rem solid #92857a;
+  border-top: 0.5rem solid #ec755d;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 5.2rem;
+}
+
 @media only screen and (min-width: 37.5em) {
   .app {
     gap: 2.4rem;
@@ -216,6 +234,10 @@ body {
   }
   .total__percentage {
     font-size: 1.8rem;
+  }
+  .spinner {
+    width: 5rem;
+    height: 5rem;
   }
 }
 @media only screen and (min-width: 62em) {

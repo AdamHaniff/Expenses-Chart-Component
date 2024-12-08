@@ -152,6 +152,13 @@
 
 // *************** SPINNER ***************
 .spinner {
+  width: 4rem;
+  height: 4rem;
+  border: 0.5rem solid $color-stonewall;
+  border-top: 0.5rem solid $color-sunrise-orange;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin: 0 auto 5.2rem;
 }
 
 // ******** 600px MEDIA QUERY ********
@@ -242,5 +249,11 @@
     &__percentage {
       font-size: 1.8rem;
     }
+  }
+
+  // ************** SPINNER **************
+  .spinner {
+    width: 5rem;
+    height: 5rem;
   }
 }

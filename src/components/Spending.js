@@ -27,30 +27,30 @@ export default function Spending() {
     setDayOfWeek(formattedDay);
   }, []);
 
-  // useEffect(() => {
-  //   const fetchExpenses = async () => {
-  //     // Fetch expenses data from JSON server
-  //     try {
-  //       setIsLoading(true);
-  //       const response = await fetch("http://localhost:8000/expenses");
+  useEffect(() => {
+    const fetchExpenses = async () => {
+      // Fetch expenses data from JSON server
+      try {
+        setIsLoading(true);
+        const response = await fetch("/data/expenses.json");
 
-  //       // Handle non-OK responses
-  //       if (!response.ok) {
-  //         throw new Error("🚨 Couldn't fetch the data 🚨");
-  //       }
+        // Handle non-OK responses
+        if (!response.ok) {
+          throw new Error("🚨 Couldn't fetch the data 🚨");
+        }
 
-  //       const data = await response.json();
-  //       setExpenses(data);
-  //     } catch (err) {
-  //       setIsError(true);
-  //       setErrorMessage(err.message);
-  //     } finally {
-  //       setIsLoading(false);
-  //     }
-  //   };
+        const data = await response.json();
+        setExpenses(data);
+      } catch (err) {
+        setIsError(true);
+        setErrorMessage(err.message);
+      } finally {
+        setIsLoading(false);
+      }
+    };
 
-  //   fetchExpenses();
-  // }, []);
+    fetchExpenses();
+  }, []);
 
   return (
     <div className="spending">

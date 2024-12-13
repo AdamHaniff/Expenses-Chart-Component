@@ -35,9 +35,9 @@ export default function Spending() {
         const response = await fetch("/data/expenses.json");
 
         // Handle non-OK responses
-        // if (!response.ok) {
-        //   throw new Error("🚨 Couldn't fetch the data 🚨");
-        // }
+        if (!response.ok) {
+          throw new Error("🚨 Couldn't fetch the data 🚨");
+        }
 
         const data = await response.json();
         setExpenses(data);

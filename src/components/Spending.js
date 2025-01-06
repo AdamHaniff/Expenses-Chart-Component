@@ -29,7 +29,7 @@ export default function Spending() {
 
   useEffect(() => {
     const fetchExpenses = async () => {
-      // Fetch expenses data from JSON server
+      // Fetch expenses data from JSON file
       try {
         setIsLoading(true);
         const response = await fetch("/data/expenses.json");
